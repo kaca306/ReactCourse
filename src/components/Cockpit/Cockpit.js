@@ -5,17 +5,17 @@ const cockpit = ( props ) => {
 
 
 
-    useEffect(() => {
-      console.log('Cockpit use effect');
-      const timer = setTimeout(() => {
-        alert('Saved data to cloud')
+    // useEffect(() => {
+    //   console.log('Cockpit use effect');
+    //   const timer = setTimeout(() => {
+    //     alert('Saved data to cloud')
 
-      },1000);
-      return () => {
-        clearTimeout(timer);
-        console.log('[Cockpit.js] cleanup work in use effect')
-      }
-    }, []);
+    //   },1000);
+    //   return () => {
+    //     clearTimeout(timer);
+    //     console.log('[Cockpit.js] cleanup work in use effect')
+    //   }
+    // }, []);
 
      useEffect(() => {
       console.log('Cockpit use effect');
