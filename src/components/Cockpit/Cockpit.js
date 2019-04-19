@@ -1,15 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import classes from './Cockpit.module.css'
+import React, { useEffect, useRef, useContext } from 'react';
+import classes from './Cockpit.module.css';
+import AuthContext from '../../context/auth-context';
 
 const cockpit = ( props ) => {
 
   const toggleButtonRef = useRef(null);
-  
+  const authContext = useContext(AuthContext);
 
+  console.log(authContext.authenticated);
 
     useEffect(() => {
       console.log('Cockpit use effect');
-      toggleButtonRef.current.click();
+      //toggleButtonRef.current.click();
       // const timer = setTimeout(() => {
       //   alert('Saved data to cloud')
 
@@ -52,6 +54,9 @@ const cockpit = ( props ) => {
                 onClick = {props.clicked}>
                 Toggle Persons
             </button>
+           
+            <button onClick={authContext.login}>Log in </button>
+           
     </div>
     )
 };
